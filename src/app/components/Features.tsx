@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { BackgroundBeams } from '@/components/background-beams';
 
 const featureItems = [
   {
@@ -101,6 +102,13 @@ const Features = () => {
       <div
         className={`sticky top-0 left-0 w-full h-screen overflow-hidden bg-[#090112]`}
       >
+        {/* Background Beams 效果 */}
+        <div className="absolute inset-0 z-0">
+          <BackgroundBeams className="h-full">
+            <div className="hidden"></div>
+          </BackgroundBeams>
+        </div>
+        
         {featureItems.map((item, index) => (
           <div
             key={item.id}
